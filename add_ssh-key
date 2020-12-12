@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ssh-keygen -t rsa -b 4096 -C $1
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+echo "add the following key to github\n"
+cat ~/.ssh/id_rsa.pub

@@ -1,0 +1,48 @@
+#!/bin/bash
+sl="\n" 
+params="syntax on\n
+\"Solve color scheme loss in tmux -----\n
+\"set background=dark\n
+set t_Co=256\n                         
+\"-------------------------------------\n
+\n
+set backspace=indent,eol,start\n
+set tabstop=4\n
+set shell=xfce4-terminal\n
+set shiftwidth=4\n
+set sw=2\n
+set laststatus=2\n
+\n
+set nocompatible\n
+set nolist\n
+set rnu\n
+set expandtab\n
+set hlsearch\n
+set paste\n
+set ic\n
+set ruler\n
+set number\n
+set wrap\n
+set showcmd\n
+set showmatch\n
+set autoindent\n
+set matchpairs+=<:>\n
+\n
+retab\n
+\n
+set statusline=\ %F%m%r%h%w\n 
+set statusline+=%m\ $sl
+set statusline+=%=\n
+set statusline+=\ %y\n
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}\n
+set statusline+=\[%{&fileformat}\]\n
+set statusline+=\ %p%%\n
+set statusline+=\ %l:%c\n
+set statusline+=\ $sl
+"
+
+#sudo apt-get update
+#sudo apt-get upgrade -y
+
+touch ./vimrc_test
+echo -e $params>>./vimrc_test

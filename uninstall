@@ -1,0 +1,8 @@
+#!/bin/bash
+
+package=$1
+
+sudo apt-get remove $package 
+sudo apt-get purge $package 
+sudo apt-get autoremove
+sudo apt-get clean
